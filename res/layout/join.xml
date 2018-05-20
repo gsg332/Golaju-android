@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+		android:layout_width="fill_parent"
+	   	android:layout_height="30dp"
+	   	android:background="#2FC121"
+	   	android:paddingTop="2dp"
+	   	android:paddingBottom="2dp" 
+	   	android:gravity="center" >
+    
+	   	<TextView
+	     	android:layout_width="wrap_content"
+	     	android:layout_height="wrap_content"
+	     	android:text="@string/text_join"
+	     	android:textColor="#FFFFFF"
+	     	android:textSize="20sp"
+	     	android:textStyle="bold"
+	      />
+	</LinearLayout>
+	
+    
+    <LinearLayout
+		android:layout_width="fill_parent"
+	   	android:layout_height="wrap_content"
+	   	android:orientation="vertical"
+	   	android:gravity="center"
+	   	android:layout_marginTop="20dp"
+	   	android:padding="5dp" >
+    
+	   	<TextView
+	     	android:layout_width="wrap_content"
+	     	android:layout_height="wrap_content"
+	     	android:text="@string/text_guide"
+	     	android:textColor="#AAAA11"
+	     	android:layout_marginBottom="40dp"
+	    />
+	   	
+	   	<EditText 
+	   	    android:id="@+id/joinIdEdit" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/text_id"
+	        android:background="@drawable/edittext_style"
+        />
+	   	
+	   	<EditText 
+	   	    android:id="@+id/joinPwEdit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:hint="@string/text_pw"
+	        android:inputType="textPassword"
+	        android:background="@drawable/edittext_style"
+        />
+	   	
+	   	<EditText 
+	   	    android:id="@+id/joinPwChkEdit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:hint="@string/text_pw_chk"
+	        android:inputType="textPassword"
+	        android:background="@drawable/edittext_style"
+        />
+	   	
+	   	<EditText
+	   	    android:id="@+id/joinEmailEdit" 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:hint="@string/text_email"
+	        android:background="@drawable/edittext_style"
+        />
+	   	
+	  	<CheckBox
+           	android:id="@+id/joinGetEmail"
+     		android:layout_width="fill_parent"
+     		android:layout_height="wrap_content"
+			android:text="@string/text_isGetMail"
+			android:button="@drawable/checkbox_style"					     	
+     	/>
+	   	
+	   	
+	  	
+	  	
+	  	
+	   	
+   		<Button
+   		    android:id="@+id/btn_doJoin"
+	     	android:layout_width="fill_parent"
+	     	android:layout_height="wrap_content"
+	     	android:text="@string/text_join"
+	     	android:textColor="#FFFFFF"
+	     	android:layout_marginTop="35dp"
+	     	android:layout_marginBottom="20dp"
+	     />
+	   	
+	   	<LinearLayout
+			android:layout_width="fill_parent"
+		   	android:layout_height="wrap_content"
+		   	android:orientation="horizontal"
+		   	android:layout_marginLeft="30dp"
+		   	android:layout_marginRight="30dp"
+		   	
+		>
+    
+	        <CheckBox
+	            android:id="@+id/chk_user_agreements"
+		     	android:layout_width="wrap_content"
+		     	android:layout_height="wrap_content"
+				android:text="@string/text_agreements"
+				android:button="@drawable/checkbox_style"						     	
+		     	/>
+	        
+	        
+		   	<Button
+		   	    android:id="@+id/btn_user_agreements"
+		     	android:layout_width="wrap_content"
+		     	android:layout_height="wrap_content"
+		     	android:layout_marginLeft="40dp"
+		     	android:text="@string/text_user_agreements"
+		     	android:textColor="#FFFFFF"
+		     />
+		</LinearLayout>
+		
+	   	
+	</LinearLayout>
+	
+    
+    
+    
+    
+    
+    
+</LinearLayout>
+
+

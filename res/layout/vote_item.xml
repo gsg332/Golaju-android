@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="#FFFFFF" android:layout_gravity="center_horizontal" android:layout_marginTop="10dp">
+	<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="#FFFFFF">
+	    <LinearLayout android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="wrap_content" android:background="@color/gainsboro" android:layout_margin="5dp">
+	    	<TextView android:id="@+id/checkBtn" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:text="투표하기" android:padding="2dp" android:background="#ADC000" android:layout_marginTop="5dp"/>    	
+	        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:padding="5dp">
+		        <ImageView android:id="@+id/voteImg" android:layout_width="125dp" android:layout_height="125dp" android:layout_marginRight="5dp" android:contentDescription=""/>
+		        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+		            <TextView android:id="@+id/votePercent" android:layout_width="125dp" android:layout_height="25dp" android:background="#FFFFFF" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/springgreen" android:gravity="center"/>
+		            <TextView android:id="@+id/voteTitle" android:layout_width="125dp" android:layout_height="95dp" android:background="#FFFFFF" android:layout_marginTop="5dp" android:padding="5dp" android:gravity="center"/>
+		        </LinearLayout>
+			</LinearLayout>
+	    </LinearLayout>
+	    <TextView android:id="@+id/voteListNum" android:layout_width="40dp" android:layout_height="50dp" android:layout_gravity="top|left" android:background="@drawable/gandi" android:textSize="40sp" android:textStyle="bold" android:textColor="@color/yellow" android:gravity="center"/>
+	</FrameLayout>
+</LinearLayout>

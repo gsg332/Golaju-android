@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuArea"
+    android:layout_alignParentRight="true"
+   	android:layout_width="160dp"
+   	android:layout_height="wrap_content"
+   	android:background="#000000"
+   	android:visibility="invisible" >
+   	
+   	<ListView
+   	   android:layout_width="fill_parent"
+   	   android:layout_height="fill_parent"
+   	   android:id="@+id/menu_listView"
+   	   android:choiceMode="singleChoice"
+   	  >
+   	    
+   	    
+   	</ListView>
+   	
+   	
+</FrameLayout>

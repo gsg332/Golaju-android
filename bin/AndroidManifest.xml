@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kcube.golaju"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+	
+	
+	<uses-permission android:name="android.permission.INTERNET" />
+ 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 	 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+ 	<uses-permission android:name="android.permission.GET_TASKS"/>
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+ 	
+ 	<!-- GCM 받기 -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<!-- GCM을 받으려면 구글 계정 필요 -->
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<!-- 메시지 받을 때 wake up 하기 위해 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	
+ 	<permission android:name="com.kcube.golaju.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.kcube.golaju.permission.C2D_MESSAGE" /> 
+ 	
+ 	
+    <application
+        android:name="com.kcube.golaju.data.Global"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" 
+        android:largeHeap="true"
+        >
+        
+        
+        <activity
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:alwaysRetainTaskState="true"
+            android:name="com.kcube.golaju.login.Login" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+             
+        <!-- GCM 리시버 -->
+		<receiver
+		   android:name="com.google.android.gcm.GCMBroadcastReceiver"
+		   android:permission="com.google.android.c2dm.permission.SEND" >
+		   <intent-filter>
+		      <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		      <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+		      <category android:name="com.kcube.golaju" /> <!-- 젤리빈 부터는 category 빼도 된다 -->
+		   </intent-filter>
+		</receiver>
+		
+		<service android:name=".GCMIntentService" />
+        
+
+		<activity 
+		    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+		    android:name="com.kcube.golaju.splash.Splash"
+		    android:label="Splash" 
+		    android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.join.Join"
+            android:label="Join" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.join.AddJoinInfoGuide"
+            android:label="AddJoinInfoGuide" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.join.FirstAddInfo"
+            android:label="FirstAddInfo" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+       
+        <activity 
+            android:name="com.kcube.golaju.join.SecondAddInfo"
+            android:label="SecondAddInfo" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+
+        <activity 
+            android:name="com.kcube.golaju.item.WriteForm"
+            android:label="WriteForm"
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.item.ModifyForm"
+            android:label="ModifyForm"
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.item.ItemList"
+            android:label="ItemList"
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.item.ItemRead"
+            android:label="ItemRead"
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.service.Service"
+            android:label="Service" 
+             android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.option.Option"
+            android:label="Option" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.mypage.Mypage"
+            android:label="Mypage" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+            
+        <activity 
+            android:name="com.kcube.golaju.item.OriginalImage"
+            android:label="OriginalImage" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.notification.Notification"
+            android:label="Notification"  
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+        
+        <activity 
+            android:name="com.kcube.golaju.notification.Popup"
+            android:label="Popup" 
+            android:configChanges="keyboardHidden|orientation|uiMode|screenSize" />
+
+        
+    </application>
+
+</manifest>
